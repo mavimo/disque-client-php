@@ -76,7 +76,7 @@ class Client
 
         // Enqueue the job
         $result = $this->socket->sendCommand($commands);
-var_dump($result);
+
         // Set the job ids for the created element
         // $job->setIds($result);
 
