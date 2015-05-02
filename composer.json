@@ -1,5 +1,5 @@
 {
-    "name": "mavimo/disque",
+    "name": "mavimo/disque-client",
     "description": "PHP Client for Disque",
     "license": "MIT",
     "authors": [
