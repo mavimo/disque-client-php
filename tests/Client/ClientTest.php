@@ -9,6 +9,7 @@
 namespace Mavimo\Tests\Disque\Client;
 
 use Mavimo\Disque\Client\Client;
+use Mavimo\Disque\Client\SocketInterface;
 
 class ClientTest extends \PHPUnit_Framework_TestCase
 {
@@ -16,7 +17,9 @@ class ClientTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $this->client = new Client('asd', 1234);
+        $socket = $this->prophesize('Mavimo\Disque\Client\SocketInterface');
+
+        $this->client = new Client($socket->reveal());
     }
 
     public function testSkip()

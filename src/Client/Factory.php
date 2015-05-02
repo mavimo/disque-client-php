@@ -10,11 +10,14 @@
 namespace Mavimo\Disque\Client;
 
 use Mavimo\Disque\Client\Client;
+use Mavimo\Disque\Client\Socket;
 
 class Factory
 {
     public function create($address = '127.0.0.1', $port = 7711)
     {
-        return new Client($address, $port);
+        $socket = new Socket($address, $port);
+
+        return new Client($socket);
     }
 }

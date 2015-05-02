@@ -12,7 +12,7 @@ use Mavimo\Disque\Job\Job;
 
 class JobTest extends \PHPUnit_Framework_TestCase
 {
-    public function testIdsSplitting()
+    public function testJobIdsSplitting()
     {
         $job = new Job('test', 'DI0f0c644fd3ccb51c2cedbd47fcb6f312646c993c05a0SQ');
 

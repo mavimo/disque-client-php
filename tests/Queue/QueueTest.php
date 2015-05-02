@@ -12,7 +12,7 @@ use Mavimo\Disque\Queue\Queue;
 
 class QueueTest extends \PHPUnit_Framework_TestCase
 {
-    public function testQueueHaveName()
+    public function testQueueHasName()
     {
         $queue = new Queue('test');
 
