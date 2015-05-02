@@ -95,11 +95,11 @@ final class Socket implements SocketInterface
         // Multi-bulk reply
         if ($type === '*') {
             $count = (int) $result;
-            $result = [];
-            for ($i = 0; $i < $count; $i++) {
+            for ($i = 0, $result = array(); $i < $count; $i++) {
                 $result[] = $this->parseResponse();
             }
-            return $result;
         }
+
+        return $result;
     }
 }
