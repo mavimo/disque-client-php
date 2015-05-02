@@ -15,6 +15,6 @@ matrix:
     - php: nightly
 
 script:
-  - ./vendor/bin/phpcs phpcs.conf.dist
+  - ./vendor/bin/phpcs phpcs.conf.dist --ignore=phpcs.conf.dist
   - ./vendor/bin/phpmd src/ text codesize,unusedcode,naming,phpmd.xml.dist
   - ./vendor/bin/phpunit
