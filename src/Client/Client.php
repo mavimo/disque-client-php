@@ -78,7 +78,7 @@ class Client
         $result = $this->socket->sendCommand($commands);
 
         // Set the job ids for the created element
-        // $job->setIds($result);
+        $job->setIds($result);
 
         return $job;
     }

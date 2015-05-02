@@ -42,12 +42,23 @@ $body = json_encode([
     'bar' => 'Lorem ipsum',
 ]);
 
-$job = new Mavimo\Disque\Job\Job($body);
+$jobA = new Mavimo\Disque\Job\Job($body);
+$jobB = new Mavimo\Disque\Job\Job($body);
+$jobC = new Mavimo\Disque\Job\Job($body);
 
-$client->push($queue, $job);
-$client->push($queue, $job);
+$client->push($queue, $jobA);
+var_dump($jobA);
+$client->push($queue, $jobB);
+var_dump($jobB);
+$client->push($queue, $jobC);
+var_dump($jobC);
 
-$job = $client->fetch($queue);
-$job = $client->fetch($queue, 1);
-$job = $client->fetch($queue, 1);
+$job1 = $client->fetch($queue);
+var_dump($job1);
+$job2 = $client->fetch($queue);
+var_dump($job2);
+$job3 = $client->fetch($queue, 1);
+var_dump($job3);
+$job4 = $client->fetch($queue, 1);
+var_dump($job4);
 ```
