@@ -1,5 +1,7 @@
 # Disque client for PHP
 
+![Build status](https://api.travis-ci.org/mavimo/disque-client-php.svg)
+
 The current project is a PHP client for [disque](https://github.com/antirez/disque). As specified in the project page disque is ongoing experiment to build a distributed, in memory, message broker. Its goal is to capture the essence of the "Redis as a jobs queue" use case.
 
 **WARNING: Like disque this project alpha code NOT suitable for production. The implementation and API will likely change in significant ways during the next months. The code and algorithms are not tested enough. A lot more work is needed.**
